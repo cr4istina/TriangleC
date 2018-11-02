@@ -19,7 +19,7 @@ public class Triangle {
 
     public static void getArea(Triangle triangle){
         double semiperimeter = (triangle.side1 + triangle.side2 + triangle.side3) / 2;
-        double area = Math.sqrt(semiperimeter * (semiperimeter - triangle.side1) * (semiperimeter - triangle.side2) * (semiperimeter - triangle.side3));
+        double area = semiperimeter * Math.sqrt(semiperimeter * (semiperimeter - triangle.side1) * (semiperimeter - triangle.side2) * (semiperimeter - triangle.side3));
         DecimalFormat ar = new DecimalFormat("0.##");
         System.out.println(ar.format(area));
     }
