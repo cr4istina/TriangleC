@@ -9,7 +9,7 @@ public class Triangle {
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
-        System.out.println(side1 + " " + side2 + " " + side3);
+        System.out.println(side1 + ", " + side2 + ", " + side3 + ";");
     }
 
     public static void getPerimeter(Triangle triangle){
@@ -19,7 +19,7 @@ public class Triangle {
 
     public static void getArea(Triangle triangle){
         double semiperimeter = (triangle.side1 + triangle.side2 + triangle.side3) / 2;
-        double area = semiperimeter * Math.sqrt(semiperimeter * (semiperimeter - triangle.side1) * (semiperimeter - triangle.side2) * (semiperimeter - triangle.side3));
+        double area = Math.sqrt(semiperimeter * (semiperimeter - triangle.side1) * (semiperimeter - triangle.side2) * (semiperimeter - triangle.side3));
         DecimalFormat ar = new DecimalFormat("0.##");
         System.out.println(ar.format(area));
     }
